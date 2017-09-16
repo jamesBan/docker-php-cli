@@ -1,4 +1,5 @@
 FROM alpine:3.4
+RUN cp /etc/apk/repositories /etc/apk/repositories.bak && echo "http://mirrors.aliyun.com/alpine/v3.4/main/" > /etc/apk/repositories
 RUN apk --update add \  
     musl freetype libjpeg-turbo libpng zlib \
     php5 \
